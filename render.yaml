@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: contact-form-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: EMAIL_ADDRESS
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: CLIENT_EMAIL
+        sync: false
