@@ -16,7 +16,7 @@ app.config["MAIL_USE_SSL"] = os.getenv("MAIL_USE_SSL", "true").lower() == "true"
 app.config["MAIL_USERNAME"] = os.getenv("EMAIL_ADDRESS")
 app.config["MAIL_PASSWORD"] = os.getenv("EMAIL_PASSWORD")
 app.config["MAIL_DEFAULT_SENDER"] = os.getenv("EMAIL_ADDRESS")
-CORS(app, resources={r"/send-email": {"origins": "http://127.0.0.1:5500"}})
+CORS(app, resources={r"/send-email": {"origins": "https://lawson-for-lawson.pages.dev/"}})
 mail = Mail(app)
 
 @app.route('/send_email', methods=['POST'])
